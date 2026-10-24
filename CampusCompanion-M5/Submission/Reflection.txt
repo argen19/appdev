@@ -1,0 +1,3 @@
+Reflection — URLSession and Codable compared with Retrofit and Gson
+
+URLSession.shared.dataTask and Retrofit's enqueue() both start asynchronous requests so the interface remains responsive while waiting for a server. URLSession delivers data, response, and error in one completion handler, while Retrofit separates HTTP responses into onResponse() and request failures into onFailure(). Swift's JSONDecoder converts JSON into Codable structs in a do/catch block, similar to Gson's fromJson() converting JSON into typed Java or Kotlin objects. After decoding, this iOS app dispatches persistence and interface changes to the main queue, replaces the stored announcements without duplicates, and displays the server data.
